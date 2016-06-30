@@ -1,14 +1,15 @@
 require('sinatra')
 require('sinatra/reloader')
-also_reload('lib/**/*.rb')
 require('./lib/combo')
 require('pry')
+also_reload('lib/**/*.rb')
+
 
 get('/') do
   erb(:index)
 end
 
 get('/output') do
-  # @title = params.fetch('title').title_case()
+  @output = params.fetch('user_input').combo()
   erb(:output)
 end
