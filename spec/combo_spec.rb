@@ -14,4 +14,7 @@ describe('String#combo') do
   it("returns the amount of pennies from any given number") do
     expect(('1').combo).to eq("1 pennies")
   end
+  it("returns the amount of quarters ") do
+    expect(('75').combo).to eq("2 quarters 2 dimes 1 nickels")
+  end
 end
